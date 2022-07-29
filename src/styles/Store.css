@@ -1,0 +1,49 @@
+/* Grid Elements */
+#grid-header {
+    grid-area: header;
+}
+
+#grid-sidebar {
+    grid-area: sidebar;
+}
+
+#grid-main {
+    grid-area: main;
+}
+
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: 
+        "header header header header"
+        "sidebar main main main"
+        "sidebar main main main"
+        "sidebar main main main";
+    background-color: thistle;
+    height: 933px;
+}
+/* Grid Elements */
+
+/* Sidebar Gun List */
+.bubble-gun-list {
+    list-style: none;
+}
+
+li {
+    margin-top: 5px;
+}
+
+li:first-child {
+    margin-top: 0px;
+}
+/* Sidebar Gun List */
+
+#green-bubble-gun {
+    height: 200px;
+}
+
+#blue-bubble-gun {
+    height: 200px;
+}

@@ -14,3 +14,9 @@
 .navbar-element {
     font-size: 20px;
 }
+
+.navbar-element:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+    cursor: pointer;
+}

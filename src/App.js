@@ -1,11 +1,12 @@
 import './App.css';
 import {useState, useEffect} from 'react';
 import React from 'react';
+import NavBar from './components/NavBar';
 
 const App = () => {
   return (
     <div>
-      <div> Hello from App!</div>
+      <NavBar />
     </div>
   );
 };
