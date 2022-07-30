@@ -29,10 +29,29 @@
 /* Sidebar Gun List */
 .bubble-gun-list {
     list-style: none;
+    padding-left: 5px;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.bubble-gun-list:hover {
+    cursor: pointer;
+}
+
+#bubble-gun-pistol:hover {
+    color: blue;
+}
+
+#bubble-gun-shotgun:hover {
+    color: red;
+}
+
+#bubble-gun-launcher:hover {
+    color: yellow;
 }
 
 li {
-    margin-top: 5px;
+    margin-top: 20px;
 }
 
 li:first-child {
@@ -40,10 +59,20 @@ li:first-child {
 }
 /* Sidebar Gun List */
 
-#green-bubble-gun {
+.bubble-gun-image {
     height: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.bubble-gun-image:first-child {
+    margin-right: 10px;
+}
+
+/*#green-bubble-gun {
+    
 }
 
 #blue-bubble-gun {
-    height: 200px;
-}
+
+} */
