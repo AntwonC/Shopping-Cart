@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react';
 import '../styles/ItemCard.css';
 
 const ItemCard = (props) => {
-  const {gunImage, id} = props;
+  const {gunImage, id, price} = props;
   const [counter, setCounter] = useState(0);
 
   const incrementCounter = () => {
@@ -17,12 +17,15 @@ const ItemCard = (props) => {
   };
 
   return (
-    <div id={id} className="item-card">
+    <div data-testid={id} id={id} className="item-card">
       <img src={gunImage} className="bubble-gun-image" alt="bubbleGun" />
       <div className="user-amount-button">
-        <button onClick={incrementCounter}>+</button>
-        {counter}
-        <button onClick={decrementCounter}>-</button>
+        <div id="button-container">
+          <button onClick={decrementCounter}>-</button>
+          <div id="counter-display-element">{counter}</div>
+          <button onClick={incrementCounter}>+</button>
+        </div>
+        <div id="bubble-gun-price-element">{price}</div>
       </div>
     </div>
   );

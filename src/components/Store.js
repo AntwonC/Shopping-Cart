@@ -28,18 +28,19 @@ const Store = () => {
           <ItemCard
             id="green-bubble-gun"
             gunImage={greenBubbleGunImage}
-
+            price={'$7.99'}
 
           />
           <ItemCard
             id="blue-bubble-gun"
             gunImage={blueBubbleGunImage}
-
+            price={'$8.99'}
 
           />
           <ItemCard
             id="purple-bubble-gun"
             gunImage={purpleBubbleGunImage}
+            price={'$9.99'}
 
           />
           { /* <img id="green-bubble-gun" className="bubble-gun-image" src={greenBubbleGunImage} alt="greenBubbleGun"/>
