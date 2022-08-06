@@ -1,18 +1,50 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable max-len */
 import React from 'react';
 import NavBar from './NavBar';
 import ItemCard from './ItemCard';
+import Checkout from './Checkout';
 import '../styles/Store.css';
 import {useState, useEffect} from 'react';
-import greenBubbleGunImage from '../images/green-bubble-gun.jpeg';
-import blueBubbleGunImage from '../images/blue-bubble-gun.jpeg';
-import purpleBubbleGunImage from '../images/purple-bubble-gun.jpg';
+import items from '../data/items';
 
-const Store = () => {
+const Store = ({products, setProducts, cart, totalCost, addItem}) => {
+  // const [products, setProducts] = useState(items);
+  // const [cart, setCart] = useState([]);
+  // const [totalCost, setTotalCost] = useState(0);
+  // const [cart, setCart] = useState([]);
+
+  const filterFunction = (item) => {
+    // console.log(item);
+    if (item.category === 'Pistol') {
+      return true;
+    }
+
+    return false;
+  };
+
+  const showPistols = () => {
+    const pistolsArr = products.filter(filterFunction);
+
+    const updatedPistolsArr = pistolsArr.map((item) => {
+      return <ItemCard
+        gunImage={item.src}
+        id={item.id}
+        price={item.price}
+        addToCart={() => addItem(item)}
+        quantity={item.quantity}
+        products={products}
+        item={item}
+        setProducts={setProducts}
+        key={item.name}
+      />;
+    });
+    // console.log(updatedPistolsArr);
+    return updatedPistolsArr;
+  };
   // Call the function from the child component, but get the counter for that item
   return (
     <div className="store-container">
-      <NavBar />
       <div className="grid-layout">
         <div id="grid-header">
           <h1>This is the Store!!!</h1>
@@ -25,7 +57,9 @@ const Store = () => {
           </ul>
         </div>
         <div id="grid-main">
-          <ItemCard
+
+          {showPistols()}
+          {/* <ItemCard
             id="green-bubble-gun"
             gunImage={greenBubbleGunImage}
             price={'$7.99'}
@@ -42,7 +76,9 @@ const Store = () => {
             gunImage={purpleBubbleGunImage}
             price={'$9.99'}
 
-          />
+  />*/}
+
+
           { /* <img id="green-bubble-gun" className="bubble-gun-image" src={greenBubbleGunImage} alt="greenBubbleGun"/>
           <img id="blue-bubble-gun" className="bubble-gun-image" src={blueBubbleGunImage} alt="blueBubbleGun" />
   <img id="purple-bubble-gun" className="bubble-gun-image" src={purpleBubbleGunImage} alt="purpleBubbleGun" /> */}

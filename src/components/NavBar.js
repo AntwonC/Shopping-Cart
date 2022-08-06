@@ -21,6 +21,10 @@ const NavBar = () => {
     navigate('/');
   };
 
+  const navigateToCheckout = () => {
+    navigate('/Checkout');
+  };
+
 
   return (
     <div>
@@ -29,7 +33,10 @@ const NavBar = () => {
           <a className="navbar-element" onClick={navigateToHome}>Home</a>
           <a className="navbar-element" onClick={navigateToStore}>Store</a>
           <a className="navbar-element" onClick={navigateToAbout}>About</a>
-          <img className="navbar-element" src={ShoppingCartImage} alt="pinkShoppingCart"/>
+          <img className="navbar-element"
+            onClick={navigateToCheckout}
+            src={ShoppingCartImage}
+            alt="pinkShoppingCart"/>
         </nav>
       </nav>
     </div>

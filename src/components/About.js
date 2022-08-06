@@ -5,7 +5,6 @@ import NavBar from './NavBar';
 const About = () => {
   return (
     <div>
-      <NavBar />
       <h1>Hello from About! Nice seeing you here.</h1>
     </div>
   );
