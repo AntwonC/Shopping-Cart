@@ -1,3 +1,35 @@
+.header-cart-info {
+    margin: 0 auto;
+    text-align: center;
+}
+
 .cart-item {
+    display: flex;
     list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid blueviolet;
+    width: 35%;
+}
+
+.cart-item:first-child {
+    margin-bottom: 10px;
+}
+
+.cart-item:last-child {
+    margin-top: 10px;
+}
+
+.cart-item img {
+    width: 100px;
+}
+
+.cart-item div {
+    font-size: 25px;
+}
+
+.total-cost-element {
+    margin: 0 auto;
+    text-align: center;
 }
