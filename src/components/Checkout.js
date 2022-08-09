@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react';
 import NavBar from './NavBar';
 import '../styles/Checkout.css';
 
-const Checkout = ({cart, totalCost, getSinglePrice}) => {
+const Checkout = ({cart, removeItem, totalCost, getSinglePrice}) => {
   const calculateTotalCost = () => {
     const cartArr = [...cart];
     let fullTotalCost = 0;
@@ -16,7 +16,7 @@ const Checkout = ({cart, totalCost, getSinglePrice}) => {
       fullTotalCost += addCost;
     }
 
-    return fullTotalCost;
+    return fullTotalCost.toFixed(2);
   };
   const renderTotalCost = () => {
     const finalCost = calculateTotalCost();
@@ -27,6 +27,7 @@ const Checkout = ({cart, totalCost, getSinglePrice}) => {
     }
   };
 
+
   const showCartItems = () => {
     const cartArr = [...cart];
 
@@ -35,7 +36,8 @@ const Checkout = ({cart, totalCost, getSinglePrice}) => {
       return <li key={cartElement.id} className="cart-item">
         <img src={cartElement.src} alt={'bubbleGun'}/>
         <div>Quantity: {cartElement.quantity}</div>
-        <div>Price: ${getSinglePrice(cartElement.price) * cartElement.quantity}</div>
+        <div>Price: ${(getSinglePrice(cartElement.price) * cartElement.quantity).toFixed(2)}</div>
+        <button className="remove-item-cart" onClick={() => removeItem(cartElement)}>Remove</button>
       </li>;
     });
 
@@ -57,6 +59,7 @@ const Checkout = ({cart, totalCost, getSinglePrice}) => {
       <h1 className="header-cart-info">You have {numberOfItems()} item in your cart!</h1>
       <ul>{showCartItems()}</ul>
       {renderTotalCost()}
+      <button className="checkout-button">Checkout</button>
     </div>
   );
 };

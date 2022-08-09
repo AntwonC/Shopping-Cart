@@ -20,6 +20,17 @@ const RouteSwitcher = () => {
     return itemPrice;
   };
 
+  const removeCartItem = (element) => {
+    const cartArr = [...cart];
+
+    console.log(`element: ${element.src}`);
+
+    const updatedCartArr = cartArr.filter((item) => item.src !== element.src);
+
+    setCartAmount((prevValue) => prevValue - 1);
+    setCart(updatedCartArr);
+  };
+
   const updateDuplicate = (item, price) => {
     const cartArr = [...cart];
     let dupe = false;
@@ -79,6 +90,7 @@ const RouteSwitcher = () => {
         <Route path="/Checkout"
           element={<Checkout
             cart={cart}
+            removeItem={removeCartItem}
             totalCost={totalCost}
             getSinglePrice={getIntPrice}
           />} />

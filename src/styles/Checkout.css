@@ -10,7 +10,8 @@
     align-items: center;
     margin: 0 auto;
     border: 1px solid blueviolet;
-    width: 35%;
+    width: 50%;
+    gap: 10px;
 }
 
 .cart-item:first-child {
@@ -32,4 +33,10 @@
 .total-cost-element {
     margin: 0 auto;
     text-align: center;
+}
+
+.checkout-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
 }
