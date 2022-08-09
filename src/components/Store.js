@@ -9,11 +9,6 @@ import {useState, useEffect} from 'react';
 import items from '../data/items';
 
 const Store = ({products, setProducts, cart, totalCost, addItem}) => {
-  // const [products, setProducts] = useState(items);
-  // const [cart, setCart] = useState([]);
-  // const [totalCost, setTotalCost] = useState(0);
-  // const [cart, setCart] = useState([]);
-
   const filterFunction = (item) => {
     // console.log(item);
     if (item.category === 'Pistol') {

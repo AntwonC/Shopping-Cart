@@ -6,11 +6,24 @@ import NavBar from './NavBar';
 import '../styles/Checkout.css';
 
 const Checkout = ({cart, totalCost, getSinglePrice}) => {
+  const calculateTotalCost = () => {
+    const cartArr = [...cart];
+    let fullTotalCost = 0;
+
+    for (let i = 0; i < cartArr.length; i++) {
+      console.log(cartArr[i]);
+      const addCost = cartArr[i].quantity * +getSinglePrice(cartArr[i].price);
+      fullTotalCost += addCost;
+    }
+
+    return fullTotalCost;
+  };
   const renderTotalCost = () => {
-    if ( totalCost === 0 ) {
+    const finalCost = calculateTotalCost();
+    if ( finalCost === 0 ) {
       return <div></div>;
     } else {
-      return <div className="total-cost-element">Total Cost: ${totalCost}</div>;
+      return <div className="total-cost-element">Total Cost: ${finalCost}</div>;
     }
   };
 

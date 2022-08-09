@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable max-len */
 import React from 'react';
 import {useState, useEffect} from 'react';
@@ -5,7 +6,7 @@ import {useNavigate} from 'react-router-dom';
 import '../styles/Navbar.css';
 import ShoppingCartImage from '../images/shopping-cart.png';
 
-const NavBar = () => {
+const NavBar = ({cartNotif}) => {
   const navigate = useNavigate();
 
   const navigateToAbout = () => {
@@ -33,10 +34,14 @@ const NavBar = () => {
           <a className="navbar-element" onClick={navigateToHome}>Home</a>
           <a className="navbar-element" onClick={navigateToStore}>Store</a>
           <a className="navbar-element" onClick={navigateToAbout}>About</a>
-          <img className="navbar-element"
-            onClick={navigateToCheckout}
-            src={ShoppingCartImage}
-            alt="pinkShoppingCart"/>
+          <div className="navbar-element">
+            <img
+              className="shopping-cart-image"
+              onClick={navigateToCheckout}
+              src={ShoppingCartImage}
+              alt="pinkShoppingCart"/>
+            <div className="cart-badge-element">{cartNotif}</div>
+          </div>
         </nav>
       </nav>
     </div>

@@ -20,3 +20,19 @@
     text-decoration-color: red;
     cursor: pointer;
 }
+
+.shopping-cart-image {
+    height: 50px;
+}
+
+.cart-badge-element {
+    background-color: palevioletred;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    bottom: 50px;
+    left: 35px;
+    width: 0.7rem;   
+    font-size: 1.2rem;
+    font-weight: bold;
+}
