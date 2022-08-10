@@ -42,6 +42,7 @@
     color: blue;
 }
 
+
 #bubble-gun-shotgun:hover {
     color: red;
 }
@@ -50,11 +51,11 @@
     color: yellow;
 }
 
-li {
+option {
     margin-top: 20px;
 }
 
-li:first-child {
+option:first-child {
     margin-top: 0px;
 }
 /* Sidebar Gun List */
@@ -63,6 +64,7 @@ li:first-child {
     height: 200px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 10px;
 }
 
 .bubble-gun-image:first-child {

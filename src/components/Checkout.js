@@ -16,14 +16,15 @@ const Checkout = ({cart, removeItem, totalCost, getSinglePrice}) => {
       fullTotalCost += addCost;
     }
 
-    return fullTotalCost.toFixed(2);
+    return fullTotalCost;
   };
   const renderTotalCost = () => {
     const finalCost = calculateTotalCost();
+    console.log(`Final Cost: ${finalCost}`);
     if ( finalCost === 0 ) {
       return <div></div>;
     } else {
-      return <div className="total-cost-element">Total Cost: ${finalCost}</div>;
+      return <div className="total-cost-element">Total Cost: ${finalCost.toFixed(2)}</div>;
     }
   };
 
@@ -54,12 +55,20 @@ const Checkout = ({cart, removeItem, totalCost, getSinglePrice}) => {
     return countItems;
   };
 
+  const alertCheckout = () => {
+    if ( cart.length === 0 ) {
+      alert('You want to checkout nothing?');
+    } else {
+      alert('You will get your bubble guns...');
+    }
+  };
+
   return (
     <div className="checkout-container">
       <h1 className="header-cart-info">You have {numberOfItems()} item in your cart!</h1>
       <ul>{showCartItems()}</ul>
       {renderTotalCost()}
-      <button className="checkout-button">Checkout</button>
+      <button className="checkout-button" onClick={alertCheckout}>Checkout</button>
     </div>
   );
 };
