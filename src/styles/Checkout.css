@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+.checkout-container {
+    background-color: thistle;
+    height: 907px;
+}
+
 .cart-item {
     display: flex;
     list-style-type: none;

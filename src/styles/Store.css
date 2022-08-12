@@ -22,7 +22,7 @@
         "sidebar main main main"
         "sidebar main main main";
     background-color: thistle;
-    height: 933px;
+    height: 907px;
 }
 /* Grid Elements */
 
@@ -38,19 +38,6 @@
     cursor: pointer;
 }
 
-#bubble-gun-pistol:hover {
-    color: blue;
-}
-
-
-#bubble-gun-shotgun:hover {
-    color: red;
-}
-
-#bubble-gun-launcher:hover {
-    color: yellow;
-}
-
 option {
     margin-top: 20px;
 }
@@ -58,6 +45,15 @@ option {
 option:first-child {
     margin-top: 0px;
 }
+
+.gun-option:disabled {
+    color: #48622b;
+}
+
+.gun-option:hover {
+    color: #e3dccd;
+}
+
 /* Sidebar Gun List */
 
 .bubble-gun-image {

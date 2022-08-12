@@ -21,10 +21,12 @@
     margin-left: 5px;
 }
 
-#counter-display-element {
+.counter-display-element {
     display: inline-block;
+    background-color: transparent;
+    border: none;
     font-size: 20px;
-    width: 20px;
+    width: 25px;
     
 }
 
