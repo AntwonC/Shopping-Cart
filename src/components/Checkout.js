@@ -33,7 +33,7 @@ const Checkout = ({cart, removeItem, totalCost, getSinglePrice}) => {
     const cartArr = [...cart];
 
     const cartElements = cartArr.map((cartElement) => {
-      console.log(cartElement.src);
+      // console.log(cartElement.src);
       return <li key={cartElement.id} className="cart-item">
         <img src={cartElement.src} alt={'bubbleGun'}/>
         <div>Quantity: {cartElement.quantity}</div>
@@ -48,7 +48,7 @@ const Checkout = ({cart, removeItem, totalCost, getSinglePrice}) => {
     let countItems = 0;
 
     for (let i = 0; i < cart.length; i++) {
-      console.log(`Items in the cart: ${cart[i]}`);
+      // console.log(`Items in the cart: ${cart[i]}`);
       countItems++;
     }
 

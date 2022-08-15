@@ -46,7 +46,7 @@ const ItemCard = (props) => {
         <div id="button-container">
           <button className="operation-button" onClick={decrementCounter}>-</button>
           <input type="text"
-            id="counter-display-element"
+            className="counter-display-element"
             value={counter}
             onChange={customAmount}/>
           <button className="operation-button" onClick={incrementCounter}>+</button>

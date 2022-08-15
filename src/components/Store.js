@@ -13,6 +13,10 @@ const Store = ({products, setProducts, cart, totalCost, addItem}) => {
   const [shotgunState, setShotgunState] = useState(false);
   const [launcherState, setLauncherState] = useState(false);
 
+  const [disablePistolClick, setDisablePistolClick] = useState(true);
+  const [disableShotgunClick, setDisableShotgunClick] = useState(false);
+  const [disableLauncherClick, setDisableLauncherClick] = useState(false);
+
   const updateItems = (evt) => {
     const {textContent} = evt.target;
     console.log(evt.target.textContent.substring(0, textContent.length-1));
@@ -20,14 +24,31 @@ const Store = ({products, setProducts, cart, totalCost, addItem}) => {
     if ( textContent === 'Pistols' ) {
       setShotgunState(false);
       setLauncherState(false);
+      // Make sure options are clickable again
+      setDisablePistolClick(true);
+      setDisableShotgunClick(false);
+      setDisableLauncherClick(false);
+
       setPistolState((prevValue) => !prevValue);
     } else if ( textContent === 'Shotguns' ) {
       setPistolState(false);
       setLauncherState(false);
+
+      // Make sure options are clickable again
+      setDisablePistolClick(false);
+      setDisableShotgunClick(true);
+      setDisableLauncherClick(false);
+
       setShotgunState((prevValue) => !prevValue);
     } else if ( textContent === 'Launchers' ) {
       setPistolState(false);
       setShotgunState(false);
+
+      // Make sure options are clickable again
+      setDisablePistolClick(false);
+      setDisableShotgunClick(false);
+      setDisableLauncherClick(true);
+
       setLauncherState((prevValue) => !prevValue);
     }
     // set[textContent.substring(0, textContent.length-1).toLowerCase()] + State =
@@ -44,6 +65,15 @@ const Store = ({products, setProducts, cart, totalCost, addItem}) => {
   const filterShotgunFunction = (item) => {
     // console.log(item);
     if (item.category === 'Shotgun') {
+      return true;
+    }
+
+    return false;
+  };
+
+  const filterLauncherFunction = (item) => {
+    // console.log(item);
+    if (item.category === 'Launcher') {
       return true;
     }
 
@@ -90,48 +120,45 @@ const Store = ({products, setProducts, cart, totalCost, addItem}) => {
     return updatedShotgunsArr;
   };
 
+  const showLaunchers = () => {
+    const launcherArr = products.filter(filterLauncherFunction);
+
+    const updatedLauncherArr = launcherArr.map((item) => {
+      return <ItemCard
+        gunImage={item.src}
+        id={item.id}
+        price={item.price}
+        addToCart={() => addItem(item)}
+        quantity={item.quantity}
+        products={products}
+        item={item}
+        setProducts={setProducts}
+        key={item.name}
+      />;
+    });
+    // console.log(updatedPistolsArr);
+    return updatedLauncherArr;
+  };
+
 
   // Call the function from the child component, but get the counter for that item
   return (
     <div className="store-container">
       <div className="grid-layout">
-        <div id="grid-header">
-          <h1>This is the Store!!!</h1>
-        </div>
+        <p className="info-text">Pick your favorite bubble gun!</p>
         <div id="grid-sidebar">
           <ul className="bubble-gun-list">
-            <option id="bubble-gun-pistol" onClick={updateItems}>Pistols</option>
-            <option id="bubble-gun-shotgun" onClick={updateItems}>Shotguns</option>
-            <option id="bubble-gun-launcher" onClick={updateItems}>Launchers</option>
+            <option id="bubble-gun-pistol" className='gun-option' disabled={disablePistolClick} onClick={updateItems}>Pistols</option>
+            <option id="bubble-gun-shotgun" className='gun-option' disabled={disableShotgunClick} onClick={updateItems}>Shotguns</option>
+            <option id="bubble-gun-launcher" className='gun-option' disabled={disableLauncherClick} onClick={updateItems}>Launchers</option>
           </ul>
         </div>
         <div id="grid-main">
 
           {pistolState && showPistols()}
           {shotgunState && showShotguns()}
-          {/* <ItemCard
-            id="green-bubble-gun"
-            gunImage={greenBubbleGunImage}
-            price={'$7.99'}
+          {launcherState && showLaunchers()}
 
-          />
-          <ItemCard
-            id="blue-bubble-gun"
-            gunImage={blueBubbleGunImage}
-            price={'$8.99'}
-
-          />
-          <ItemCard
-            id="purple-bubble-gun"
-            gunImage={purpleBubbleGunImage}
-            price={'$9.99'}
-
-  />*/}
-
-
-          { /* <img id="green-bubble-gun" className="bubble-gun-image" src={greenBubbleGunImage} alt="greenBubbleGun"/>
-          <img id="blue-bubble-gun" className="bubble-gun-image" src={blueBubbleGunImage} alt="blueBubbleGun" />
-  <img id="purple-bubble-gun" className="bubble-gun-image" src={purpleBubbleGunImage} alt="purpleBubbleGun" /> */}
         </div>
       </div>
     </div>

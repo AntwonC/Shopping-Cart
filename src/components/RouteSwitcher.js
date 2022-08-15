@@ -51,18 +51,19 @@ const RouteSwitcher = () => {
         break;
       }
     }
-    console.log(dupe);
+    // console.log(dupe);
     return dupe;
   };
 
   const addToCart = (item) => {
-    console.log(item);
+    // console.log(item);
     // console.log(item.quantity);
     const cartArr = [...cart];
 
-    // const cartNoDupe = updateDuplicate(item, getIntPrice(item.price));
-
-    if ( updateDuplicate(item, getIntPrice(item.price)) === false ) {
+    // Check if item quantity is > 0
+    if ( item.quantity === 0 ) {
+      return;
+    } else if ( updateDuplicate(item, getIntPrice(item.price)) === false ) {
       const updatedCartArr = cartArr.concat(item);
       const buyAmount = item.quantity;
       const itemCost = buyAmount * getIntPrice(item.price);
