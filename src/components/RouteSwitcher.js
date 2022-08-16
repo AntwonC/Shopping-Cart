@@ -16,14 +16,14 @@ const RouteSwitcher = () => {
 
   const getIntPrice = (price) => {
     const itemPrice = price.substring(1, price.length);
-    console.log(itemPrice);
+   
     return itemPrice;
   };
 
   const removeCartItem = (element) => {
     const cartArr = [...cart];
 
-    console.log(`element: ${element.src}`);
+  
 
     const updatedCartArr = cartArr.filter((item) => item.src !== element.src);
 
@@ -75,7 +75,7 @@ const RouteSwitcher = () => {
   };
 
   return (
-    <HashRouter basename="/">
+    <HashRouter basename="/Shopping-Cart">
       <NavBar cartNotif={cartAmount}/>
       <Routes>
         <Route path="/" element={<App />} />
