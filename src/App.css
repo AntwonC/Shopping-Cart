@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "Vertigo";
+    src: url('./fonts/VertigoFLF.ttf');
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.home-container {
+    background-color: thistle;
+    height: 907px;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+p {
+    font-family: "Vertigo";
+    font-size: 40px;
+}
+
+.home-page-image {
+    height: 80%;
+    width: 100%;
+}

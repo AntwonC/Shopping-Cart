@@ -1,0 +1,38 @@
+.navbar-container {
+    background-color: pink;
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    
+}
+
+.navbar-links-container {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-element {
+    font-size: 20px;
+}
+
+.navbar-element:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+    cursor: pointer;
+}
+
+.shopping-cart-image {
+    height: 50px;
+}
+
+.cart-badge-element {
+    background-color: palevioletred;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    bottom: 50px;
+    left: 35px;
+    width: 0.7rem;   
+    font-size: 1.2rem;
+    font-weight: bold;
+}

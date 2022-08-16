@@ -1,0 +1,9 @@
+.about-container {
+    display: block;
+    background-color: thistle;
+    height: 907px;
+}
+
+.header-about-element {
+    margin: 0 auto;
+}
