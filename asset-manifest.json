@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Shopping-Cart/static/css/main.53b49b49.css",
-    "main.js": "/Shopping-Cart/static/js/main.14ad9d39.js",
-    "static/media/blue-bubble-gun.jpeg": "/Shopping-Cart/static/media/blue-bubble-gun.c84c93108ecce2be6342.jpeg",
-    "static/media/blue-bubble-handgun.jpeg": "/Shopping-Cart/static/media/blue-bubble-handgun.f0886c2b4fd556223c12.jpeg",
-    "static/media/red-bubble-handgun.jpg": "/Shopping-Cart/static/media/red-bubble-handgun.4a52296fe17834150bd4.jpg",
-    "static/media/Semi-Coder-Regular.otf": "/Shopping-Cart/static/media/Semi-Coder-Regular.294be87b08c58bbc4d79.otf",
-    "static/media/blue-bubble-shotgun.jpg": "/Shopping-Cart/static/media/blue-bubble-shotgun.5f9a0942bbc0c2be13fc.jpg",
-    "static/media/VertigoFLF.ttf": "/Shopping-Cart/static/media/VertigoFLF.7ff77689d8b1e5da273e.ttf",
-    "static/media/purple-bubble-gun.jpg": "/Shopping-Cart/static/media/purple-bubble-gun.c0d6bf3c8916b3db301e.jpg",
-    "static/media/green-bubble-gun.jpeg": "/Shopping-Cart/static/media/green-bubble-gun.2ffcf62cac112ffdb1e8.jpeg",
-    "static/media/shopping-cart.png": "/Shopping-Cart/static/media/shopping-cart.73ceb53d8e1eac8bb5b3.png",
-    "index.html": "/Shopping-Cart/index.html",
-    "main.53b49b49.css.map": "/Shopping-Cart/static/css/main.53b49b49.css.map",
-    "main.14ad9d39.js.map": "/Shopping-Cart/static/js/main.14ad9d39.js.map"
+    "main.css": "/static/css/main.996c2b88.css",
+    "main.js": "/static/js/main.df428a1f.js",
+    "static/media/blue-bubble-gun.jpeg": "/static/media/blue-bubble-gun.c84c93108ecce2be6342.jpeg",
+    "static/media/blue-bubble-handgun.jpeg": "/static/media/blue-bubble-handgun.f0886c2b4fd556223c12.jpeg",
+    "static/media/red-bubble-handgun.jpg": "/static/media/red-bubble-handgun.4a52296fe17834150bd4.jpg",
+    "static/media/Semi-Coder-Regular.otf": "/static/media/Semi-Coder-Regular.294be87b08c58bbc4d79.otf",
+    "static/media/blue-bubble-shotgun.jpg": "/static/media/blue-bubble-shotgun.5f9a0942bbc0c2be13fc.jpg",
+    "static/media/VertigoFLF.ttf": "/static/media/VertigoFLF.7ff77689d8b1e5da273e.ttf",
+    "static/media/purple-bubble-gun.jpg": "/static/media/purple-bubble-gun.c0d6bf3c8916b3db301e.jpg",
+    "static/media/green-bubble-gun.jpeg": "/static/media/green-bubble-gun.2ffcf62cac112ffdb1e8.jpeg",
+    "static/media/shopping-cart.png": "/static/media/shopping-cart.73ceb53d8e1eac8bb5b3.png",
+    "index.html": "/index.html",
+    "main.996c2b88.css.map": "/static/css/main.996c2b88.css.map",
+    "main.df428a1f.js.map": "/static/js/main.df428a1f.js.map"
   },
   "entrypoints": [
-    "static/css/main.53b49b49.css",
-    "static/js/main.14ad9d39.js"
+    "static/css/main.996c2b88.css",
+    "static/js/main.df428a1f.js"
   ]
 }
