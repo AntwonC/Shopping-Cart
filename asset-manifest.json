@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Home/static/css/main.6fe80ec7.css",
-    "main.js": "/Home/static/js/main.d64cb559.js",
+    "main.js": "/Home/static/js/main.ff99a237.js",
     "static/media/blue-bubble-gun.jpeg": "/Home/static/media/blue-bubble-gun.c84c93108ecce2be6342.jpeg",
     "static/media/blue-bubble-handgun.jpeg": "/Home/static/media/blue-bubble-handgun.f0886c2b4fd556223c12.jpeg",
     "static/media/red-bubble-handgun.jpg": "/Home/static/media/red-bubble-handgun.4a52296fe17834150bd4.jpg",
@@ -13,10 +13,10 @@
     "static/media/shopping-cart.png": "/Home/static/media/shopping-cart.73ceb53d8e1eac8bb5b3.png",
     "index.html": "/Home/index.html",
     "main.6fe80ec7.css.map": "/Home/static/css/main.6fe80ec7.css.map",
-    "main.d64cb559.js.map": "/Home/static/js/main.d64cb559.js.map"
+    "main.ff99a237.js.map": "/Home/static/js/main.ff99a237.js.map"
   },
   "entrypoints": [
     "static/css/main.6fe80ec7.css",
-    "static/js/main.d64cb559.js"
+    "static/js/main.ff99a237.js"
   ]
 }
