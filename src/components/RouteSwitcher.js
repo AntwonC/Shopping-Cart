@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, HashRouter} from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import items from '../data/items';
 import React from 'react';
@@ -75,7 +75,7 @@ const RouteSwitcher = () => {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <NavBar cartNotif={cartAmount}/>
       <Routes>
         <Route path="/Home" element={<App />} />
@@ -96,7 +96,7 @@ const RouteSwitcher = () => {
             getSinglePrice={getIntPrice}
           />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
