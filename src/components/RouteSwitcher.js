@@ -16,14 +16,11 @@ const RouteSwitcher = () => {
 
   const getIntPrice = (price) => {
     const itemPrice = price.substring(1, price.length);
-   
     return itemPrice;
   };
 
   const removeCartItem = (element) => {
     const cartArr = [...cart];
-
-  
 
     const updatedCartArr = cartArr.filter((item) => item.src !== element.src);
 
