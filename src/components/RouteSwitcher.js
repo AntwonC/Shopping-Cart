@@ -72,10 +72,10 @@ const RouteSwitcher = () => {
   };
 
   return (
-    <HashRouter basename="/Shopping-Cart">
+    <BrowserRouter>
       <NavBar cartNotif={cartAmount}/>
       <Routes>
-        <Route path="/Shopping-Cart" element={<App />} />
+        <Route path="/Home" element={<App />} />
         <Route path="/About" element={<About />} />
         <Route path="/Store"
           element={<Store
@@ -93,7 +93,7 @@ const RouteSwitcher = () => {
             getSinglePrice={getIntPrice}
           />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 

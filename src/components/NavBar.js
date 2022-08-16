@@ -19,7 +19,7 @@ const NavBar = ({cartNotif}) => {
   };
 
   const navigateToHome = () => {
-    navigate('/Shopping-Cart');
+    navigate('/Home');
   };
 
   const navigateToCheckout = () => {
