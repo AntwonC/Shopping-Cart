@@ -75,7 +75,7 @@ const RouteSwitcher = () => {
     <HashRouter basename="/Shopping-Cart">
       <NavBar cartNotif={cartAmount}/>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/Shopping-Cart" element={<App />} />
         <Route path="/About" element={<About />} />
         <Route path="/Store"
           element={<Store
